@@ -20,8 +20,7 @@ if __name__ == '__main__':
     actions = "all" 
 
     batch_size = 128
-    # annotations_folder = "./datasets/Human36M/"
-    annotations_folder = "/home-local/tokoro/motion_prediction/h36m/h3.6m/datast"
+    annotations_folder = "./datasets/Human36M/"
     precomputed_folder = "./auxiliar/datasets/Human36M"
     obs_length = 25
     pred_length = 100
