@@ -1,0 +1,9 @@
+numpy
+scikit-learn
+umap-learn
+hdbscan
+pandas
+einops
+matplotlib
+cdflib
+zarr
