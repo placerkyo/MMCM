@@ -36,3 +36,13 @@ python evaluate_baseline.py --pred_path "baseline_output/<Baseline>/h36m/npy/" -
 
 ### Base form
 - coming soon
+
+
+## Hyperparameter search
+For example,
+```
+python compute_mmcm/parameter_search.py --data_config_path compute_mmcm/default_parms/h36m/h36_config.json --stride 25 --frames 103
+
+python compute_mmcm/parameter_search.py --data_config_path compute_mmcm/default_parms/amass/amass_config.json --stride 60 --frames 123
+```
+

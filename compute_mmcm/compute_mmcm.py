@@ -3,12 +3,10 @@ import os
 import torch
 import numpy as np
 import hdbscan
-from hdbscan.prediction import approximate_predict, approximate_predict_scores
 import umap.umap_ as umap
 from tqdm import tqdm
 import pickle
 import joblib
-from scipy.spatial.distance import cdist
 
 
 # # 2つ上の階層を参照パスに追加
@@ -350,8 +348,8 @@ class ComputeMMCM():
         for nbatch, batch in tqdm(batches_toenumerate, total=len_data_loader):
             data, target, extra = batch
             
-            assert self.args.frames >= target.shape[1], f"frames ({self.args.frames}) must be greater than or equal to target.shape[1] ({target.shape[1]})"
-            if self.args.frames > target.shape[1]:
+            assert self.ae_model_parms.frames >= target.shape[1], f"frames ({self.ae_model_parms.frames}) must be greater than or equal to target.shape[1] ({target.shape[1]})"
+            if self.ae_model_parms.frames > target.shape[1]:
                 target = torch.cat([data[:,-(self.ae_model_parms.frames-target.shape[1]):,...], target], dim=1)
 
             data, target = data.to(self.ae_model_parms.device), target.to(self.ae_model_parms.device)
@@ -380,10 +378,7 @@ class ComputeMMCM():
         _check_shape(obs,  "obs")
         _check_shape(pred, "pred")
 
-        if self.ae_model_parms.frames != 100:
-            target = torch.cat([obs[:,-(self.ae_model_parms.frames-100):,...], pred], dim=1)
-        else:
-            target = pred
+        target = torch.cat([obs[:,-(self.ae_model_parms.frames-pred.shape[1]):,...], pred], dim=1)
         target = target.to(self.ae_model_parms.device)       # [b, t, 1, 16, 3]
 
         # Autoencoder
