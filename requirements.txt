@@ -1,9 +1,13 @@
-numpy
-scikit-learn
-umap-learn
-hdbscan
-pandas
-einops
-matplotlib
-cdflib
-zarr
+numpy==1.24.4
+scikit-learn==1.1.2
+faiss-cpu==1.11.0
+# faiss-cpu==1.7.4
+llvmlite==0.44.0
+numba==0.61.2
+umap-learn==0.5.7
+hdbscan==0.8.40
+pandas==1.5.0
+einops==0.8.1
+matplotlib==3.6.0
+cdflib==0.4.7
+zarr==2.13.3

@@ -101,7 +101,6 @@ class Clusterer:
                     # Fit the model and get the results
                     result = self.fit_hdbscan()
                     test_noise_ratio, test_num_clusters = self.clustering()
-                    # 2重になってるから意味ない
                     result["test_noise"] = test_noise_ratio
                     result["test_num_clusters"] = test_num_clusters
 
@@ -304,7 +303,7 @@ if __name__ == '__main__':
     parser.add_argument('-d', '--data', default='test')
     parser.add_argument('--dataset_split', type=str, default='training')
     parser.add_argument('--stride', type=int, default=25)
-    # autoencoderのパラメータ
+    # autoencoder
     parser.add_argument('--model_config_path', type=str, default="compute_mmcm/default_parms/h36m/autoencoder_config.json")
     parser.add_argument('--model_name', type=str, default="checkpoint-epoch3000.pth")
     parser.add_argument('--frames', type=int, default=103)
