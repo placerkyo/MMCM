@@ -162,3 +162,4 @@ results/
 wandb/
 compute_mmcm/default_parms/amass/*
 compute_mmcm/default_parms/h36m/*
+!image/Overview.png
