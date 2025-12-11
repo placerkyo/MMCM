@@ -5,6 +5,8 @@ Kyotaro Tokoro, Hiromu Taketsugu, Norimichi Ukita
 
 MMCM: Multimodality-aware Metric using Clustering-based Modes for Probabilistic Human Motion Prediction, WACV 2026
 
+[arxiv](https://arxiv.org/pdf/2511.15179), [suppl](https://www.toyota-ti.ac.jp/Lab/Denshi/iim/ukita/selection/WACV_tokoro_arXiv_supp.pdf)
+
 <!-- <!-- ![Top page](image/Overview.png) -->
 
 <p align="center">
