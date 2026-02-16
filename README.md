@@ -33,7 +33,7 @@ pip install -r requirements.txt
 ### From numpy output
 - You can evaluate predictions saved in NumPy format (.npy).
 - Please refer to ```save_baseline_as_npy.py``` for how to export your prediction results as an .npy file. By running this script, you can also save the outputs of a very simple baseline predictor.
-- The output results for one method (BeLFusion) can be downloaded from [npy results](https://drive.google.com/drive/folders/1YLFb8TA-V2CxTwFgVnPafJevbxdc6VAb?usp=drive_link), and you unzip the file and place it in './baseline_output/belfusion/h36m/'. Please note that the resulting zip file is quite large (about 4.5 GB).
+- The output results for one method (CoMusion) can be downloaded from [npy results](https://drive.google.com/drive/folders/1YLFb8TA-V2CxTwFgVnPafJevbxdc6VAb?usp=drive_link), and you unzip the file and place it in './baseline_output/comusion/h36m/'. Please note that the resulting zip file is quite large (about 4.5 GB).
 
 ```
 # Baseline --> {comusion, belfusion, dlow, and so on}
